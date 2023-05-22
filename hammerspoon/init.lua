@@ -1,5 +1,5 @@
-require("modules/magnet")
-require("modules/switch")
+require("Spoons/magnet")
+require("Spoons/switch")
 
 
 -------------------------------------------------------------------
