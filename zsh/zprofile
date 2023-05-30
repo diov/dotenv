@@ -1,0 +1,3 @@
+# Dotnet
+# As set-dotnet-env takes too much time
+. $HOME/.asdf/plugins/dotnet/set-dotnet-env.zsh

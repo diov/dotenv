@@ -1,3 +1,5 @@
+zmodload zsh/zprof
+
 [[ ! -f $HOME/.zsh/dracula/dracula.zsh-theme ]] || source $HOME/.zsh/dracula/dracula.zsh-theme
 
 autoload -Uz compinit
@@ -13,6 +15,7 @@ zstyle ':completion:*:cd:*' ignore-parents parent pwd
 zstyle ':completion:*:functions' ignored-patterns '_*'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path $HOME/.zsh/cache
+zstyle ':completion:*' menu select
 
 # Language
 export TERM="xterm-256color"
@@ -55,6 +58,7 @@ source $HOME/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source $HOME/.zsh/zsh-completions/zsh-completions.plugin.zsh
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $HOME/.zsh/zsh-edit/zsh-edit.plugin.zsh
 source $HOME/.zsh/history.zsh
 source $HOME/.zsh/key-bindings.zsh
 
@@ -62,7 +66,7 @@ source $HOME/.zsh/key-bindings.zsh
 unset 'FAST_HIGHLIGHT[chroma-man]'  # chroma-man will stuck history browsing
 
 # zsh-autosuggestions
-ZSH_AUTOSUGGEST_MANUAL_REBIND='1'
+# ZSH_AUTOSUGGEST_MANUAL_REBIND='1'
 
 # zsh-history-substring-search
 HISTORY_SUBSTRING_SEARCH_FUZZY='1'
