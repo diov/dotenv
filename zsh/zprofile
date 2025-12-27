@@ -1,3 +1,29 @@
-# Dotnet
-# As set-dotnet-env takes too much time
-. $HOME/.asdf/plugins/dotnet/set-dotnet-env.zsh
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# mise
+eval "$(/Users/dio.ye/.local/bin/mise activate zsh)"
+
+# JAVA
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Golang
+export GOPATH=$(go env GOPATH)
+export PATH="$PATH:$(go env GOPATH)/bin"
+
+# Rust
+export PATH="$PATH:$HOME/.cargo/bin"
+
+# Android
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools"
+
+# Flutter
+export PATH="$PATH:$HOME/Project/Environment/flutter/bin"
+
+# Added by Antigravity
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+
+# remove duplicat entries from $PATH
+# zsh uses $path array along with $PATH 
+typeset -U PATH path

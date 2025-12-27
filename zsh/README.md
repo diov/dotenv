@@ -22,5 +22,5 @@ git clone https://github.com/dracula/zsh.git ~/.zsh/dracula
 ```bash
 ln -fs $(pwd)/zshrc ~/.zshrc
 ln -fs $(pwd)/zshenv ~/.zshenv
-ln -fs $(pwd)zprofile ~/.zprofile
+ln -fs $(pwd)/zprofile ~/.zprofile
 ```
