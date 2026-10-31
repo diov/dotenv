@@ -1,26 +1,25 @@
 Config zsh without any frameworks.
 
-### Install plugins & themes
-
-All zsh plugins & themes are store in `$HOME/.zsh` directory.
-
+### Install
 
 ```bash
-git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ~/.zsh/fast-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-completions.git ~/.zsh/zsh-completions
-git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.zsh/zsh-history-substring-search
-git clone --depth 1 https://github.com/marlonrichert/zsh-edit.git ~/.zsh/zsh-edit
-cd ~/.zsh/ && curl -O https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/history.zsh
-cd ~/.zsh/ && curl -O https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/key-bindings.zsh
-
-git clone https://github.com/dracula/zsh.git ~/.zsh/dracula
+./install.sh
 ```
 
-### Setup
+The script:
 
-```bash
-ln -fs $(pwd)/zshrc ~/.zshrc
-ln -fs $(pwd)/zshenv ~/.zshenv
-ln -fs $(pwd)/zprofile ~/.zprofile
-```
+1. Clones the theme and plugins into `~/.zsh` if missing:
+   - [dracula/zsh](https://github.com/dracula/zsh)
+   - [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting)
+   - [zsh-completions](https://github.com/zsh-users/zsh-completions)
+   - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+   - [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
+   - [zsh-edit](https://github.com/marlonrichert/zsh-edit)
+2. Downloads `history.zsh` and `key-bindings.zsh` from oh-my-zsh into `~/.zsh` if missing.
+3. Links `zshrc`, `zshenv` and `zprofile` to `~/.zshrc`, `~/.zshenv` and `~/.zprofile`.
+
+Existing plugins are not updated.
+
+### PATH
+
+All PATH setup lives in `zprofile`. `~/.local/bin` comes right after Homebrew; mise is activated after that.
