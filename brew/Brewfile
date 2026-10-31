@@ -1,0 +1,8 @@
+tap "homebrew/services"
+
+brew "coreutils"
+brew "ffmpeg"
+brew "gh"
+brew "imagemagick"
+brew "rtk"
+brew "zsh"
