@@ -1,0 +1,27 @@
+[tools]
+bun = "latest"
+deno = "latest"
+go = "1.25.5"
+java = "temurin-17"
+node = "24.12.0"
+pnpm = "latest"
+python = "3.14.2"
+uv = "latest"
+
+# Global CLI tools, independent of the active node/python version
+"npm:@openai/codex" = "latest"
+"npm:pyright" = "latest"
+# Pinned: 12.x pulls chromium-bidi releases without npm provenance, which mise's trust policy rejects
+"npm:@mermaid-js/mermaid-cli" = "11.12.0"
+"npm:@binance/agentic-wallet" = "latest"
+"pypi:ruff" = "latest"
+"pypi:git-filter-repo" = "latest"
+
+[env]
+# Make uv use mise's Python instead of downloading its own
+UV_PYTHON = { value = "{{ tools.python.path }}", tools = true }
+
+[settings]
+
+[settings.python]
+uv_venv_auto = "create|source"

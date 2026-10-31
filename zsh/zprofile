@@ -7,9 +7,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # mise
 eval "$(mise activate zsh)"
 
-# JAVA
-export JAVA_HOME=$(/usr/libexec/java_home)
-
 # Golang (default GOPATH)
 export PATH="$PATH:$HOME/go/bin"
 
