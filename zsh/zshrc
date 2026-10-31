@@ -24,7 +24,7 @@ setopt pushd_ignore_dups     # don't pushd duplicates
 setopt pushd_minus           # exchange the meanings of `+` and `-` in pushd
 setopt interactive_comments  # comments in interactive shells
 setopt multios               # multiple redirections
-setopt ksh_option_print      # make setopt output all options
+# setopt ksh_option_print      # make setopt output all options
 setopt extended_glob         # extended globbing
 setopt no_bare_glob_qual     # disable `PATTERN(QUALIFIERS)`, extended_glob has `PATTERN(#qQUALIFIERS)`
 setopt glob_dots             # match hidden files (affect completion)
