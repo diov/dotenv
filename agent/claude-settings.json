@@ -1,0 +1,52 @@
+{
+  "env": {},
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "rtk hook claude"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "andrej-karpathy-skills@karpathy-skills": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "swift-lsp@claude-plugins-official": true,
+    "cc-plugin-you-should-know@builtin": true,
+    "clangd-lsp@claude-plugins-official": true,
+    "codex@openai-codex": true
+  },
+  "extraKnownMarketplaces": {
+    "karpathy-skills": {
+      "source": {
+        "source": "github",
+        "repo": "forrestchang/andrej-karpathy-skills"
+      }
+    },
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
+      }
+    }
+  },
+  "effortLevel": "high",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "high",
+      "autoCompactWindow": 300000
+    }
+  },
+  "promptSuggestionEnabled": false,
+  "tui": "fullscreen",
+  "theme": "dark-ansi",
+  "preferredNotifChannel": "auto",
+  "autoCompactEnabled": false
+}
