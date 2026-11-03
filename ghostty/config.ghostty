@@ -1,0 +1,11 @@
+theme = Dracula
+keybind = global:cmd+escape=toggle_visibility
+window-position-x = 0
+window-position-y = 0
+window-width = 300
+window-height = 26
+macos-hidden = always
+
+keybind = cmd+left=previous_tab
+keybind = cmd+right=next_tab
+macos-titlebar-style = tabs
