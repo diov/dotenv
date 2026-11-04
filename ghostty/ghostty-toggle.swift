@@ -2,6 +2,7 @@
 // can show the window but never hide it: while Ghostty is frontmost the key
 // never reaches its keybinding handling. A Carbon hotkey is delivered no
 // matter which app is frontmost.
+// Temporary: remove once Ghostty fixes it, see README.md.
 import AppKit
 import Carbon.HIToolbox
 
