@@ -1,4 +1,4 @@
-# CLAUDE.md（项目级）
+# AGENTS.md（项目级）
 
 ## 流程档位
 
