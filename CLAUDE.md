@@ -10,3 +10,7 @@
 ## Worktree
 
 没有不进 git 的必需文件，开 worktree 不需要额外拷贝。
+
+## 合并方式
+
+fast-forward 合并到 `master`，不开 PR。
