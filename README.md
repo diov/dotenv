@@ -61,5 +61,5 @@ Install these manually on a new machine with their official installers: `claude`
 ## Known issues
 
 - This repo is public. Never put API keys in `agent/claude-settings.json` (for example under `env`).
-- `agent/CLAUDE.md` contains an absolute `@/Users/<name>/.codex/RTK.md` line owned by rtk. On a machine with a different user name, rtk appends its own line.
+- `agent/AGENTS.md` contains an absolute `@/Users/<name>/.codex/RTK.md` line owned by rtk. On a machine with a different user name, rtk appends its own line.
 - Claude Code plugins listed in `agent/claude-settings.json` may need `/plugin install` on a new machine (unverified).

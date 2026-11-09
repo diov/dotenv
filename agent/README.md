@@ -10,7 +10,7 @@ Links:
 
 | File | Target |
 |---|---|
-| `CLAUDE.md` | `~/.claude/CLAUDE.md` and `~/.codex/AGENTS.md` |
+| `AGENTS.md` | `~/.claude/CLAUDE.md` and `~/.codex/AGENTS.md` |
 | `claude-code-only.md` | `~/.claude/claude-code-only.md` |
 | `claude-settings.json` | `~/.claude/settings.json` |
 
@@ -18,7 +18,7 @@ Then the script runs `rtk init -g --codex` to generate `~/.codex/RTK.md` and the
 
 ### Notes
 
-- `CLAUDE.md` is shared by Claude Code and Codex. Rules for Claude Code only go in `claude-code-only.md`, which `CLAUDE.md` imports with `@~/...`. Codex does not expand `@` imports.
+- `AGENTS.md` is shared by Claude Code and Codex. Claude Code does not read a user-level `AGENTS.md`, so it is linked as `~/.claude/CLAUDE.md`. Rules for Claude Code only go in `claude-code-only.md`, which `AGENTS.md` imports with `@~/...`. Codex does not expand `@` imports.
 - Claude Code writes `/config` changes into `claude-settings.json` through the link, so commit them like any other change.
 - This repo is public. Never put API keys in `claude-settings.json`.
 - `~/.codex/config.toml` is not tracked because it contains secrets.

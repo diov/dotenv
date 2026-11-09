@@ -2,8 +2,8 @@
 set -euo pipefail
 source "$(cd "$(dirname "$0")/.." && pwd)/common.sh"
 
-link "$DOTENV/agent/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
-link "$DOTENV/agent/CLAUDE.md" "$HOME/.codex/AGENTS.md"
+link "$DOTENV/agent/AGENTS.md" "$HOME/.claude/CLAUDE.md"
+link "$DOTENV/agent/AGENTS.md" "$HOME/.codex/AGENTS.md"
 link "$DOTENV/agent/claude-code-only.md" "$HOME/.claude/claude-code-only.md"
 link "$DOTENV/agent/claude-settings.json" "$HOME/.claude/settings.json"
 
