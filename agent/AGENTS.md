@@ -1,6 +1,8 @@
 # AGENTS.md（用户级）
 
-跨项目通用偏好。项目级 CLAUDE.md 只写项目独有内容（技术栈、目录分层、命名边界、文档索引），不重复本文。
+跨项目通用偏好。项目级规则写在项目根的 `AGENTS.md`，只写项目独有内容（技术栈、目录分层、命名边界、文档索引），不重复本文。
+
+- 项目里不放 `CLAUDE.md`、`.claude/CLAUDE.md`、`CLAUDE.local.md`：Claude Code 见到任何一个就不读 `AGENTS.md`，Codex 则只读 `AGENTS.md`。遇到旧项目还有 `CLAUDE.md`，提议合并进 `AGENTS.md` 后删除。
 
 ## 语言
 
@@ -35,7 +37,7 @@
 
 - **重流程**：命中任一条即走——数据模型或 schema 变更、跨模块改动、已在生产环境、改动对象有其他消费者（共享配置、对外 API）。
 - **轻流程**：其余情况。
-- 项目级 CLAUDE.md 可声明默认档位；改动命中重流程条件时仍走重流程。拿不准就问我。
+- 项目级 AGENTS.md 可声明默认档位；改动命中重流程条件时仍走重流程。拿不准就问我。
 
 ## 先方案后代码
 
@@ -77,12 +79,12 @@
 ## Git
 
 - 不直接提交到 main：在分支上工作，给出 diff 摘要，确认后再合并。
-- 多个 session 可能共用一个目录：默认在主目录开分支，做完切回原分支；主目录不在 main 或有别人未提交的改动时，不切它的分支，改开 worktree。在一个项目里第一次开 worktree 前，先查有哪些不进 git 的必需文件（数据、密钥、`local.properties`），在项目级 CLAUDE.md 里写明怎么带过去。
+- 多个 session 可能共用一个目录：默认在主目录开分支，做完切回原分支；主目录不在 main 或有别人未提交的改动时，不切它的分支，改开 worktree。在一个项目里第一次开 worktree 前，先查有哪些不进 git 的必需文件（数据、密钥、`local.properties`），在项目级 AGENTS.md 里写明怎么带过去。
 - 破坏性命令（`git checkout -- <file>`、`reset --hard`、`clean`、强推）执行前先问我；需要保存现场用 stash。
 - 不改 `.gitignore` 的跟踪策略（如 `task_plan.md` 是故意跟踪的）。
 - 按 scope 拆原子 commit，文档/schema 变更与实现分开提交。
 - 开发分支上照常按"一个 commit 一个意图"提交（文档与实现分开），不为 log 整洁提前合并。
-- 合并方式（squash / fast-forward）由项目级 CLAUDE.md 声明；没声明时先问我，问完写进项目级 CLAUDE.md。
+- 合并方式（squash / fast-forward）由项目级 AGENTS.md 声明；没声明时先问我，问完写进项目级 AGENTS.md。
 - 轻流程：给出 diff 摘要，确认后按项目的合并方式直接合并；Codex review 和整理历史只在我要求时做。
 - 重流程合并回 main 前先对整个分支跑 Codex review（`--base main`），结果按必须修 / 低风险 / 误报分类给我，修完再合并。
 - fast-forward 合并的项目，重流程合并回 main 前整理历史：合并同一主题的文档小改、实验记录、修正前一个 commit 的 commit，保留"规范 → 实现"的先后；在新分支上重建，不改动原分支；用 `git diff` 确认新旧分支内容完全一致，再 fast-forward 合并，整理后的 commit 列表写在总结里，不用等我确认；原分支随后直接删除（内容已确认一致）。改写已推送的历史、或从历史里删除内容时，先给出 commit 列表等我确认。squash 合并的项目跳过这一步。
