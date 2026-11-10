@@ -47,6 +47,5 @@
   "promptSuggestionEnabled": false,
   "tui": "fullscreen",
   "theme": "dark-ansi",
-  "preferredNotifChannel": "auto",
-  "autoCompactEnabled": false
+  "preferredNotifChannel": "auto"
 }
