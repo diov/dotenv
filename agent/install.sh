@@ -6,6 +6,8 @@ link "$DOTENV/agent/AGENTS.md" "$HOME/.claude/CLAUDE.md"
 link "$DOTENV/agent/AGENTS.md" "$HOME/.codex/AGENTS.md"
 link "$DOTENV/agent/claude-code-only.md" "$HOME/.claude/claude-code-only.md"
 link "$DOTENV/agent/claude-settings.json" "$HOME/.claude/settings.json"
+link "$DOTENV/agent/skills/git-workflow" "$HOME/.claude/skills/git-workflow"
+link "$DOTENV/agent/skills/git-workflow" "$HOME/.codex/skills/git-workflow"
 
 if ! command -v rtk >/dev/null; then
   echo "error: rtk not found, run brew/install.sh first" >&2

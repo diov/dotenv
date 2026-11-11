@@ -13,6 +13,7 @@ Links:
 | `AGENTS.md` | `~/.claude/CLAUDE.md` and `~/.codex/AGENTS.md` |
 | `claude-code-only.md` | `~/.claude/claude-code-only.md` |
 | `claude-settings.json` | `~/.claude/settings.json` |
+| `skills/git-workflow/` | `~/.claude/skills/git-workflow` and `~/.codex/skills/git-workflow` |
 
 Then the script runs `rtk init -g --codex` to generate `~/.codex/RTK.md` and the Codex hook. rtk must already be installed by `brew/install.sh`. The Claude Code rtk hook is already in `claude-settings.json`.
 
