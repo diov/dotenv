@@ -2,6 +2,8 @@
 
 跨项目通用偏好。项目级规则写在项目根的 `AGENTS.md`，只写项目独有内容（技术栈、目录分层、命名边界、文档索引），不重复本文。
 
+- 项目级 `AGENTS.md` 与本文冲突时以项目级为准。
+- 有其他协作者的仓库，项目级 `AGENTS.md` 要自包含（协作者读不到本文），可以重复本文的规则。
 - 项目里不放 `CLAUDE.md`、`.claude/CLAUDE.md`、`CLAUDE.local.md`：Claude Code 见到任何一个就不读 `AGENTS.md`，Codex 则只读 `AGENTS.md`。遇到旧项目还有 `CLAUDE.md`，提议合并进 `AGENTS.md` 后删除。
 
 ## 语言
