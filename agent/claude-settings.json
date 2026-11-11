@@ -1,18 +1,5 @@
 {
   "env": {},
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "rtk hook claude"
-          }
-        ]
-      }
-    ]
-  },
   "enabledPlugins": {
     "andrej-karpathy-skills@karpathy-skills": true,
     "claude-code-setup@claude-plugins-official": true,
@@ -47,5 +34,19 @@
   "promptSuggestionEnabled": false,
   "tui": "fullscreen",
   "theme": "dark-ansi",
-  "preferredNotifChannel": "auto"
+  "preferredNotifChannel": "auto",
+  "autoCompactEnabled": true,
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "rtk hook claude"
+          }
+        ]
+      }
+    ]
+  }
 }
